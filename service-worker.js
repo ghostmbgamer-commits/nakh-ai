@@ -1,5 +1,15 @@
+const CACHE_NAME = 'nakh-ai-v1';
+
 self.addEventListener('install', event => {
-  event.waitUntil(self.skipWaiting());
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.addAll([
+        '/',
+        '/index.html'
+      ]);
+    })
+  );
+  self.skipWaiting();
 });
 
 self.addEventListener('activate', event => {
@@ -10,12 +20,6 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request).then(response => {
       return response || fetch(event.request);
-    }).catch(() => caches.match('/index.html'))
+    })
   );
-});
-
-self.addEventListener('message', event => {
-  if (event.data === 'skipWaiting') {
-    self.skipWaiting();
-  }
 });
