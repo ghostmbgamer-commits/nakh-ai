@@ -1,15 +1,15 @@
 {
   "name": "Nakh AI",
   "short_name": "Nakh AI",
-  "description": "هوش مصنوعی فارسی قدرتمند و رایگان",
+  "description": "هوش مصنوعی فارسی قدرتمند و رایگان - نخ هوش",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#ffffff",
   "orientation": "portrait",
-  "id": "/?utm_source=web_app_manifest",
+  "id": "nakh-ai",
   "prefer_related_applications": false,
-  "categories": ["productivity", "tools", "education"],
+  "categories": ["productivity", "tools", "education", "artificial-intelligence"],
   "icons": [
     {
       "src": "https://raw.githubusercontent.com/ghostmbgamer-commits/nakh-ai/main/icon-512.png",
@@ -39,5 +39,9 @@
       "form_factor": "wide",
       "label": "تنظیمات Nakh AI"
     }
-  ]
+  ],
+  "serviceworker": {
+    "src": "service-worker.js",
+    "scope": "/"
+  }
 }
