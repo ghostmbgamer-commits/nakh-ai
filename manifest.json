@@ -9,7 +9,7 @@
   "orientation": "portrait",
   "id": "nakh-ai",
   "prefer_related_applications": false,
-  "categories": ["productivity", "tools", "education"],
+  "categories": ["productivity", "tools", "education", "artificial-intelligence"],
   "icons": [
     {
       "src": "https://raw.githubusercontent.com/ghostmbgamer-commits/nakh-ai/main/icon-512.png",
